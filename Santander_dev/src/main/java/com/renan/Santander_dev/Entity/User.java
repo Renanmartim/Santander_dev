@@ -4,8 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-@Entity
-@Table(name = "tb_user")
+@Entity(name = "tb_user")
 public class User {
 
     @Id
@@ -13,6 +12,8 @@ public class User {
     private Long id;
 
     private String name;
+
+    private Long wage;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
@@ -74,4 +75,11 @@ public class User {
         this.news = news;
     }
 
+    public Long getWage() {
+        return wage;
+    }
+
+    public void setWage(Long wage) {
+        this.wage = wage;
+    }
 }

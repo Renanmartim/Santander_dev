@@ -12,7 +12,14 @@ public class BankLoan {
     @OneToOne(cascade = CascadeType.ALL)
     private User user;
 
-    private String status;
+    public BankLoan(){}
+
+    public BankLoan(User user, boolean status) {
+        this.user = user;
+        this.status = status;
+    }
+
+    private boolean status;
 
     public Long getId() {
         return id;
@@ -30,11 +37,11 @@ public class BankLoan {
         this.user = user;
     }
 
-    public String getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 }
