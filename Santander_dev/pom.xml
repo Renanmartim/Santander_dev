@@ -66,7 +66,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.renan.Santander_dev.SantanderDevApplication</mainClass>
+							<mainClass>Santander_dev/src/main/java/com/renan/Santander_dev/SantanderDevApplication.java</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
