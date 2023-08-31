@@ -15,6 +15,8 @@ public class User {
 
     private Long wage;
 
+    private Long cpf;
+
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 
@@ -81,5 +83,13 @@ public class User {
 
     public void setWage(Long wage) {
         this.wage = wage;
+    }
+
+    public Long getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(Long cpf) {
+        this.cpf = cpf;
     }
 }

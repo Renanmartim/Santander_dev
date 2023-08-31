@@ -1,0 +1,1 @@
+web: java -jar Santander_dev/target/Santander_dev-0.0.1-SNAPSHOT.jar

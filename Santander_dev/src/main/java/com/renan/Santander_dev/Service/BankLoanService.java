@@ -4,5 +4,7 @@ import com.renan.Santander_dev.Entity.User;
 
 public interface BankLoanService {
 
-    BankLoan verifyLoan(String account, Integer loan);
+    BankLoan verifyLoan(Long cpf, Integer loan);
+
+    BankLoan searchLoan (Long cpf);
 }

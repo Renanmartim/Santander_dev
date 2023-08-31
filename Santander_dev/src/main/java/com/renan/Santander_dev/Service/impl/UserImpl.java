@@ -19,8 +19,8 @@ public class UserImpl implements UserService {
 
     @Override
     public User saveUser(User user) throws IllegalAccessException {
-        if (userRepository.existAccountNumber(user.getAccount().getNumber())){
-            throw new IllegalAccessException("This Account number exists");
+        if (userRepository.existsByAccountNumber(user.getAccount().getNumber()) && userRepository.existsByAccountNumber(String.valueOf(user.getCpf()))){
+            throw new IllegalAccessException("This Account number exists or Cpf number exists");
         }
         return userRepository.save(user);
     }

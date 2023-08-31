@@ -9,13 +9,12 @@ public class BankLoan {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private User user;
+    private Long cpf;
 
     public BankLoan(){}
 
-    public BankLoan(User user, boolean status) {
-        this.user = user;
+    public BankLoan(Long cpf, boolean status) {
+        this.cpf = cpf;
         this.status = status;
     }
 
@@ -29,12 +28,12 @@ public class BankLoan {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public Long getIdUser() {
+        return cpf;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setIdUser(Long idUser) {
+        this.cpf = idUser;
     }
 
     public boolean getStatus() {
