@@ -5,6 +5,8 @@
 classDiagram
   class User {
     -String name
+    -Long cpf
+    -Long wage
     -Account account
     -Feature[] features
     -Card card
@@ -33,9 +35,15 @@ classDiagram
     -String description
   }
 
+  class BankLoan {
+    -Long cpf
+    -boolean status
+  }
+
   User "1" *-- "1" Account
   User "1" *-- "N" Feature
   User "1" *-- "1" Card
   User "1" *-- "N" News
+  User ..> BankLoan
 
 ```
